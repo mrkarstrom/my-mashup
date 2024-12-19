@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../index.js';
+import { app } from '../index.js';
 
 describe('Testing the root path', () => {
   it('should return 200', async () => {
@@ -8,4 +8,12 @@ describe('Testing the root path', () => {
     expect(res.statusCode).toEqual(200);
     expect(res.text).toEqual('<h1>Home</h1>');
   });
+
+  it('should return 404', async () => {
+    const res = await request(app).get('/random');
+    expect(res.statusCode).toEqual(404);
+    expect(res.text).toEqual('Not Found');
+  });
+
+  
 });
