@@ -1,0 +1,28 @@
+{
+  "name": "my-mashup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "zip": "zip -r my-mashup.zip . -x '*.git*' '*.zip' '*.env' node_modules"
+  },
+  "keywords": [],
+  "author": "Magnus Karström",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  },
+  "type": "module"
+}
